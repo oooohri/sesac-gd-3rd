@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <!-- 실습 1 -->
+    <h1>제출용 폼 만들기 실습</h1>
+ 
+        <h2>설문조사</h2>
+
+        <label for="name" name="name">이름</label>
+        <input type="text" id="name" />
+        <br/>
+        <label for="email" name="email2">이메일</label>
+        <input type="text" id="email2" />
+        <br/>
+        
+        <h4>나이</h4>
+  
+        <label for="age-10">
+        <input type="radio" name="ages" id="age-10" />10대
+        </label>
+        <label for="age-20">
+        <input type="radio" name="ages"id="age-20" />20대
+        </label>
+        <label for="age-30">
+        <input type="radio" name="ages"id="age-30" />30대
+        </label>
+        <label for="age-40">
+        <input type="radio" name="ages"id="age-40" />40대
+        </label>
+        <label for="age-50">
+        <input type="radio" name="ages"id="age-50" />50대
+        </label>
+        <label for="age-60">
+        <input type="radio" name="ages"id="age-60" />60대 이상
+        </label>
+        
+        <h4>원하는 강의(복수응답가능합니다.)</h4>
+        <label for="html" >
+        <input type="checkbox" name="corse" id="html" />html
+        </label>
+        <label for="javascript" >
+        <input type="checkbox" name="corse" id="javascript" />javascript
+        </label>
+        <label for="css" >
+        <input type="checkbox" name="corse" id="css" />css
+        </label>
+        <br />
+        <br />
+        <textarea id="text-box" cols="130" rows="10" placeholder="하고싶은 말을 써주세요 :)" ></textarea>
+        <input type="submit" />
+    </form>
+
+    <!--  실습 2
+        1. 행의 줄을 센다. 세로줄 3개 (tr 3개)
+        2. 1행씩 들어가는 숫자와 너비를 계산하여 넣는다.
+     -->
+    <table
+      border="1"
+      cellspacing="0"
+      cellpadding="20"
+      width="100%"
+      style="text-align: center"
+    >
+      <tr>
+        <td colspan="2">1</td>
+        <td rowspan="2">2</td>
+      </tr>
+      <tr>
+        <td rowspan="2">3</td>
+        <td>center</td>
+      </tr>
+      <tr>
+        <td colspan="2">4</td>
+      </tr>
+    </table>
+    <br />
+
+    <!-- 실습 3 -->
+    <!-- ! 이미지 클릭시 주소이동 -->
+    <table
+      border="1"
+      cellspacing="0"
+      cellpadding="5"
+      width="100%"
+      style="text-align: center"
+    >
+      <!-- <h1 style="color: green" align="center">스타벅스(실습)</h1> 
+   center 대신에 caption 사용! -->
+      <caption>
+        <h1 style="color: green">스타벅스(실습)</h1>
+      </caption>
+      <tr>
+        <th>구분</th>
+        <th>음료</th>
+        <th>가격</th>
+        <th>이미지</th>
+      </tr>
+      <tr>
+        <td rowspan="2">커피류</td>
+        <td>아메리카노</td>
+        <td>4200원</td>
+        <td>
+          <a
+            href="https://www.starbucks.co.kr/menu/drink_view.do?product_cd=110563"
+          >
+            <img src="./img/아메.jpg" width="200" alt="아메리카노 사진" />
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>돌체라떼</td>
+        <td>4800원</td>
+        <td>
+          <a
+            href="https://www.starbucks.co.kr/menu/drink_view.do?product_cd=128692"
+          >
+            <img src="./img/라떼.jpg" width="200" alt="돌체라떼 사진" />
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="2">주스류</td>
+        <td>자바칩 프라푸치노</td>
+        <td rowspan="2">5000원</td>
+        <td>
+          <a
+            href="https://www.starbucks.co.kr/menu/drink_view.do?product_cd=168016"
+            target="_blank"
+          >
+            <img
+              src="./img/자바 프라푸치노.jpg"
+              width="200"
+              alt="자바칩 프라푸치노 사진"
+            />
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>녹차 프라푸치노</td>
+        <td>
+          <a
+            href="https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000002502"
+            target="_blank"
+          >
+            <img
+              src="./img/말차 프라푸치노.jpg"
+              style="width: 200px"
+              alt="말차 프라푸치노 사진"
+            />
+          </a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
