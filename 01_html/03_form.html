@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form tag의 종류</title>
+  </head>
+  <body>
+    <!-- form 태그는 사용자의 입력을 받는 요소들을 묶어주는 태그 -->
+    <!-- form 태그의 속성 : action, method -> 서버와의 통신과 관련된 속성 -->
+    <!-- 사용자의 입력을 위한 태그를 form태그 내부에 작성 -> 서버에 전달 -->
+    <form>
+      <!-- input: 사용자의 입력을 받는 태그 -->
+      <!-- input에는다양한 type 속성이 있다. -->
+      <!-- input은 열린태그 (닫는태그가 없다)이기 때문에 꼭 /로 닫아주기 -->
+      text :
+      <input type="text" />
+
+      <!-- label 태그 : for 속성을 사용해 input 태그와 연결할 수 있는 태그 -->
+      <!-- 해당 label을 클릭할 경우 연결된 input에 focus를 하거나 체크할 수 있다. -> 사용자 편의성을 높일 수 있다 -->
+      <!-- label의 for와 input의 id가 동일하면 연결된다. -->
+      <label for="connect">text with label : </label>
+      <input type="text" id="connect" />
+    </form>
+  </body>
+</html>
