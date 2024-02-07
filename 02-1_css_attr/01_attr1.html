@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css 속성 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./01_attri1.css" />
+  </head>
+  <body>
+    <h2>크기 단위</h2>
+
+    <div class="px">100px</div>
+
+    <div class="em-text">
+      em -> 32px
+      <div class="em-text">
+        -> 여기서 1em은 32px이 됨 em -> 64px
+        <div class="em-text">em -> 128px</div>
+      </div>
+    </div>
+
+    <div class="rem-text">
+      rem
+      <div class="rem-text">
+        rem
+        <div class="rem-text">rem</div>
+      </div>
+    </div>
+    <br />
+    <div class="em">10em ->부모는 body이므로 기본인 16px</div>
+    <div class="em-parents">
+      em 부모 요소 font-size : 10px
+      <div class="em">10em ->부모가 10em이므로 너비높이 100</div>
+    </div>
+
+    <div class="rem">10rem</div>
+    <div class="rem-parents">
+      rem 부모 요소 font-size : 30px
+      <div class="rem">10rem ->폰트크기는 부모에게 상속받음.</div>
+    </div>
+    <br />
+
+    <div class="percent-parents">
+      % 부모 요소 300px
+      <div class="percent">50%</div>
+    </div>
+
+    <div class="vh">30vh</div>
+    <div class="vw">30vw</div>
+
+    <div class="d-block">block1</div>
+    <div class="d-block">block2</div>
+    <div class="d-block">block3</div>
+    <div class="d-block">block4</div>
+    <br />
+    <span class="d-inline">inline1</span>
+    <span class="d-inline">inline2</span>
+    <span class="d-inline">inline3</span>
+    <span class="d-inline">inline4</span>
+    <br />
+    <br />
+    <span class="d-inline-block">inline-block1</span>
+    <span class="d-inline-block">inline-block2</span>
+    <span class="d-inline-block">inline-block3</span>
+    <span class="d-inline-block">inline-block4</span>
+
+    <br />
+    <hr />
+
+    <h2>max-width, min-width</h2>
+    <div class="parent">
+      <div class="min"></div>
+      <div class="max"></div>
+    </div>
+    <br />
+    <!-- inline 요소 자식으로 block요소가 들어갈 경우 레이아웃 깨짐 -> 사용X  -->
+    <span style="border: 5px solid black">
+      span
+      <div style="background-color: gray">div</div>
+    </span>
+    <br />
+    <header class="header">header</header>
+    <div class="calc">clac() 사용하기</div>
+    <br />
+    <hr />
+
+    <h2>border, border-radious</h2>
+    <div class="square border">border</div>
+    <button class="square rounded">rounded</div>
+    <br /><hr />
+    
+    <div class="box-sizing content-box">content-box</div>
+    <div class="box-sizingborder-box">border-box</div>
+</body>
+
+</html>

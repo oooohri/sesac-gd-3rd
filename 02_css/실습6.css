@@ -1,0 +1,24 @@
+caption > h3.title {
+  text-align: center;
+  color: green;
+  font-size: x-large;
+}
+table {
+  text-align: center;
+}
+
+th,
+tr {
+  text-align: center;
+}
+.sunday {
+  color: red;
+}
+
+.saturday {
+  color: blue;
+}
+
+.newYear {
+  color: red;
+}

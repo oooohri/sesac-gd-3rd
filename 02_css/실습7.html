@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>속성 선택자 실습</title>
+    <style>
+      input {
+        /* !important 작성 시 해당 스타일링은 무조건적으로 반영된다. */
+        background-color: pink !important;
+      }
+
+      [disabled] {
+        background-color: red;
+      }
+      [placeholder="이름"] {
+        background-color: orange;
+      }
+      /*  body > *:not([placeholder]) 수정*/
+      input:not([placeholder]) {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" placeholder="이름" />
+    <input type="password" value="pw" />
+    <!-- value 속성을 넣어서 입력 시, 해당 value는 유지되면서 추가적인 텍스트를 작성할 수 있다.
+        placeholder는 입력 시 그 값이 사라진다. -->
+    <input type="text" value="000-0000-0000" />
+    <input type="text" placeholder="핸드폰" />
+    <input type="text" placeholder="주민번호" disabled />
+  </body>
+</html>

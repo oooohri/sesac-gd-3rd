@@ -5,32 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>복합선택자 실습</title>
     <style>
-      /* 야생의 사자만 선택, 배경을 빨간색 */
+      /* 1. 야생의 사자만 선택, 배경을 빨간색 */
       p.lion {
         background-color: red;
       }
-      /* 사자를 전부 선택, 글자를 sienna 색 */
+      /* 2. 사자를 전부 선택, 글자를 sienna 색 */
       .lion {
         color: sienna;
       }
-      /* 사파리 안의 사자만 선택- 배경을 greenyellow */
-      .zoo > ul > .lion {
+      /* 3. 사파리 안의 사자만 선택- 배경을 greenyellow */
+      /* 5.동물원 안의 사자만 선택, 폰트를 두껍게 */
+      /* (240206수정) .zoo > ul > .lion를 간략화, bold 통합하여 수정 */
+      ul .lion {
         background-color: greenyellow;
+        font-weight: bold;
       }
-      /* 호랑이만 선택, 배경을 노란색 */
+      /* 4. 호랑이만 선택, 배경을 노란색 */
+      /* (240206 수정) div.zoo > ul > li#tiger 간략화하여 수정 */
       div.zoo > ul > li#tiger {
         background-color: yellow;
       }
-      /* 동물원 안의 사자만 선택, 폰트를 두껍게 */
-      div.zoo > ul > .lion {
-        font-weight: bold;
-      }
-      /* 호랑이 뒤에 있는 팬더를 선택, 배경을 하늘색(skyblue) */
-      div.zoo > ul > li#tiger + li {
+
+      /* 6. 호랑이 뒤에 있는 팬더를 선택, 배경을 하늘색(skyblue) */
+      /* (240206 수정) div.zoo > ul > li#tiger + li 간략화하여 수정 */
+      li#tiger + li {
         background-color: skyblue;
       }
-      /* 사파리 사자 뒤에 있는 사육사를 모두 선택, 배경을 오렌지색 */
-      div.zoo > ul > li.lion ~ li {
+
+      /* 7. 사파리 사자 뒤에 있는 사육사를 모두 선택, 배경을 오렌지색 */
+      /* (240206 수정) div.zoo > ul > li.lion ~ li 간략화 */
+      li.lion ~ li {
         background-color: orange;
       }
     </style>
