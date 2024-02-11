@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연휴 실습</title>
+    <!-- 실습6 -->
+    <link rel="stylesheet" href="./01-2_pratice.css" />
+    <style>
+      form {
+        width: 400px;
+      }
+      /* 실습7 */
+      /* hover */
+      h3:hover {
+        color: blue;
+        background-color: aliceblue;
+      }
+      /* focus */
+      textarea {
+        width: 100%;
+      }
+      textarea:focus {
+        background-color: honeydew;
+      }
+      /* checked */
+      #red:checked + label {
+        background-color: red;
+        color: white;
+      }
+      #blue:checked + label {
+        background-color: blue;
+        color: white;
+      }
+      #yellow:checked + label {
+        background-color: yellow;
+      }
+      /* active */
+      button {
+        float: right;
+        padding: 5px 15px;
+        background-color: #f96666;
+        color: white;
+        font-size: 17px;
+        border-radius: 10px;
+        border: none;
+      }
+      button:active {
+        background-color: lawngreen;
+        color: white;
+      }
+      /* 실습 8 */
+      .orange-box * {
+        display: inline-block;
+        margin: 0px 20px 0px 0px;
+        /* 혹은 margin-right: 20px; 써도 된다.*/
+      }
+      .orange-box {
+        width: auto;
+        height: 200px;
+        background-color: orange;
+      }
+      .html {
+        width: 200px;
+        height: 100px;
+        background-color: skyblue;
+      }
+      .css {
+        width: 200px;
+        height: 100px;
+        background-color: green;
+      }
+      .js {
+        width: 200px;
+        height: 100px;
+        background-color: red;
+      }
+
+      /* 실습9 */
+      div {
+        margin: 0px 0px 10px;
+      }
+      .width {
+        border: 1px solid;
+        border-width: 1px 1px 1px 6px;
+        border-radius: 20px 10px 0px 40px;
+      }
+      .style {
+        border: 1px solid;
+        border-style: dashed;
+        border-radius: 20px 10px 20px 10px;
+      }
+      .color {
+        border: 1px solid;
+        border-color: #f96666;
+        border-radius: 500px;
+      }
+      .direction {
+        border: 1px solid;
+        border-style: dashed dotted double groove;
+        border-color: blueviolet gold aqua wheat;
+        border-radius: 30px 30px 10px 10px;
+      }
+      /* 실습10 */
+      .parents {
+        width: calc(10vw);
+        height: calc(10vh);
+        background-color: antiquewhite;
+      }
+      .sesac {
+        width: 10vw;
+        height: calc(5vh);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(10vw);
+        line-height: calc(10vw);
+        background-color: aquamarine;
+      }
+
+      /* 실습 11 */
+      .box {
+        width: 200px;
+        height: 200px;
+        color: white;
+        background-color: blue;
+      }
+      .box:hover {
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h3><실습6. 속성 선택자></h3>
+    <input type="text" placeholder="이름" />
+    <input type="password" value="pw" />
+    <input type="text" value="000-0000-0000" />
+    <input type="text" placeholder="핸드폰" />
+    <input type="text" placeholder="주민번호" disabled />
+    <br /><br /><br /><br /><br />
+    <h2><실습7.선택자 종합 실습></h2>
+
+    <h3>건의 사항을 적어주세요!</h3>
+    <form>
+      <label for="textarea"></label>
+      <textarea
+        name="content"
+        id="textarea"
+        cols="30"
+        rows="10"
+        placeholder="건의 사항🎈"
+      ></textarea>
+      <input type="checkbox" name="red" id="red" />
+      <label for="red">빨강</label>
+      <input type="checkbox" name="blue" id="blue" />
+      <label for="blue">파랑</label>
+      <input type="checkbox" name="yellow" id="yellow" />
+      <label for="yellow">노랑</label>
+      <button>제출</button>
+    </form>
+    <br /><br /><br />
+
+    <h3><실습8. 박스모델 사용하기></h3>
+    <div class="orange-box">
+      <div class="html">HTML</div>
+      <div class="css">CSS</div>
+      <div class="js">Javascript</div>
+    </div>
+    <br /><br /><br />
+
+    <h3><실습9. 테두리 그리기></h3>
+    <div>
+      <div class="width">4방향 테두리 두께 변경하기</div>
+      <div class="style">4방향 테두리 스타일 변경하기</div>
+      <div class="color">4방향 테두리 색상 변경하기</div>
+      <div class="direction">4방향 테두리 스타일이 다른 div 완성하기</div>
+    </div>
+    <br />
+    <br />
+    <br />
+
+    <h3><실습 10. calc 사용 및 line-height 사용></h3>
+    <div class="parents">
+      <div class="sesac">SeSAC</div>
+    </div>
+    <br /><br /><br />
+
+    <h3><실습 11. 요소 사라지게 하기></h3>
+    <div class="box">마우스 호버하면 사라지게 하기</div>
+  </body>
+</html>

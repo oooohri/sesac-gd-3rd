@@ -17,10 +17,9 @@
 }
 
 /* 모든 폰트의 지정 => 전체선택자 * 사용*/
-/* 
- * {
+/*  {
   font-family: "Single Day", "Gothic A1", sans-serif;
-} 
+    } 
 */
 
 .sentence {
@@ -97,8 +96,9 @@
 .overflow-hidden {
   overflow: hidden;
 }
+
 /*  * auto와 scroll의 차이 */
-/* auto : cotent가 해당 요소의 크기를 넘지 않으면 스크롤이 생기지 않음 */
+/* auto : content가 해당 요소의 크기를 넘지 않으면 스크롤이 생기지 않음 */
 .overflow-auto {
   overflow: auto;
 }

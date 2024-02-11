@@ -1,5 +1,8 @@
+body {
+  background-color: greenyellow;
+}
+
 caption > h3.title {
-  text-align: center;
   color: green;
   font-size: x-large;
 }
