@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>background</title>
+    <!-- 그라데이션 속성 -->
+    <link rel="stylesheet" href="./02_attr3_background.css" />
+    <style>
+      div {
+        width: 300px;
+        height: 200px;
+        margin-bottom: 30px;
+      }
+      .grad-1 {
+        background: linear-gradient(grey, tomato);
+      }
+      .grad-2 {
+        background: linear-gradient(90deg, grey, tomato);
+      }
+      .grad-3 {
+        background: linear-gradient(90deg, grey, 75%, tomato);
+      }
+      .grad-4 {
+        background: linear-gradient(grey, tomato, gold);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grad-1"></div>
+    <div class="grad-2"></div>
+    <div class="grad-3"></div>
+    <div class="grad-4"></div>
+    <br /><br />
+    <hr />
+
+    <div class="background box"></div>
+    <div class="background-image box"></div>
+
+    <!-- 실습1. 배경적용 -->
+    <div class="background-img one"></div>
+    <div class="background-img two"></div>
+    <div class="background-img three"></div>
+
+    <!-- 실습2. 검색창 만들기 -->
+    <input type="text" placeholder="검색" class="search" />
+  </body>
+</html>

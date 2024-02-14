@@ -8,3 +8,126 @@
 input:not([placeholder]) {
   background-color: blue;
 }
+
+form {
+  width: 400px;
+}
+/* 실습7 */
+/* hover */
+h3:hover {
+  color: blue;
+  background-color: aliceblue;
+}
+/* focus */
+textarea {
+  width: 100%;
+}
+textarea:focus {
+  background-color: honeydew;
+}
+/* checked */
+#red:checked + label {
+  background-color: red;
+  color: white;
+}
+#blue:checked + label {
+  background-color: blue;
+  color: white;
+}
+#yellow:checked + label {
+  background-color: yellow;
+}
+/* active */
+button {
+  float: right;
+  padding: 5px 15px;
+  background-color: #f96666;
+  color: white;
+  font-size: 17px;
+  border-radius: 10px;
+  border: none;
+}
+button:active {
+  background-color: lawngreen;
+  color: white;
+}
+/* 실습 8 */
+.orange-box * {
+  display: inline-block;
+  margin: 0px 20px 0px 0px;
+  /* 혹은 margin-right: 20px; 써도 된다.*/
+}
+.orange-box {
+  width: auto;
+  height: 200px;
+  background-color: orange;
+}
+.html {
+  width: 200px;
+  height: 100px;
+  background-color: skyblue;
+}
+.css {
+  width: 200px;
+  height: 100px;
+  background-color: green;
+}
+.js {
+  width: 200px;
+  height: 100px;
+  background-color: red;
+}
+
+/* 실습9 */
+div {
+  margin: 0px 0px 10px;
+}
+.width {
+  border: 1px solid;
+  border-width: 1px 1px 1px 6px;
+  border-radius: 20px 10px 0px 40px;
+}
+.style {
+  border: 1px solid;
+  border-style: dashed;
+  border-radius: 20px 10px 20px 10px;
+}
+.color {
+  border: 1px solid;
+  border-color: #f96666;
+  border-radius: 500px;
+}
+.direction {
+  border: 1px solid;
+  border-style: dashed dotted double groove;
+  border-color: blueviolet gold aqua wheat;
+  border-radius: 30px 30px 10px 10px;
+}
+/* 실습10 */
+.body {
+  background-color: antiquewhite;
+}
+.sesac {
+  /* 뷰포트 너비의 100%가 sesac의 너비이다. */
+  width: 100vw;
+  /* 뷰포트 너비의 10%가 sesac의 높이이다. */
+  height: 10vw;
+  background-color: palegreen;
+  /* 상단 여백 : 뷰포트높이 50%에서 너비 5%뺀 값 */
+  margin: calc(50vh - 5vw) auto 0 auto;
+  color: white;
+  text-align: center;
+  /* 10vw : 현재 뷰포트 너비의 10% 만큼의 줄 간격을 설정 */
+  line-height: 10vw;
+}
+
+/* 실습 11 */
+.box {
+  width: 200px;
+  height: 200px;
+  color: white;
+  background-color: blue;
+}
+.box:hover {
+  opacity: 0;
+}
