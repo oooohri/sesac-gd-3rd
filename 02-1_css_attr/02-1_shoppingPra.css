@@ -1,0 +1,57 @@
+.product-info {
+  height: 300px;
+}
+
+.product-info-detail {
+  width: 100%;
+  height: 3000px;
+  background: linear-gradient(darkgray, palegreen);
+}
+
+.fixed-tab {
+  background-color: darksalmon;
+  border: 1px solid black;
+  top: 0;
+  position: sticky;
+}
+
+.fixed-tab ul li {
+  display: inline-block;
+}
+
+/* text-align이 안되는 이유? */
+.fixed-tab ul li .product-info-tab {
+  margin: 0 100px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.fixed-tab ul li .benefit-tab {
+  margin: 0 100px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.fixed-tab ul li .review-tab {
+  margin: 0 100px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.fixed-tab ul li .recommend-tab {
+  margin: 0 100px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* vw,vh는 그냥 단위일뿐..! 대신 height와 line-height의 단위는 통일해야한다. */
+.top-btn {
+  width: 5vw;
+  height: 5vw;
+  border-radius: 50%;
+  background-color: brown;
+  text-decoration: none;
+  color: white;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  line-height: 5vw;
+  text-align: center;
+}

@@ -99,5 +99,20 @@
 
 /* 실습2. 검색창 만들기 */
 .search {
+  width: 70px;
+  height: 20px;
+  border: 0px;
+  border-radius: 30px;
   background-image: url("./img/search-icon_480.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 5px;
+  left: 30px;
+  padding: 0px 30px;
+  background-color: gainsboro;
+}
+.search:focus {
+  border: 2px solid pink;
+  background-color: rgb(255, 246, 248);
+  outline: none;
 }
