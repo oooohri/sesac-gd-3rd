@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>애벌레 만들기</title>
+    <style>
+      .parent {
+        position: relative;
+        width: 300px;
+        height: 500px;
+        background-image: url("./img/grass.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      .circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position: absolute;
+      }
+      .circle1 {
+        background-color: rgb(19, 19, 139);
+        top: 0;
+        left: 0px;
+      }
+      .circle2 {
+        background-color: blue;
+        top: 30px;
+        left: 50px;
+      }
+      .circle3 {
+        background-color: blue;
+        top: 70px;
+        left: 100px;
+      }
+      .circle4 {
+        background-color: blue;
+        top: 0;
+        left: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>z-index 애벌레 만들기</h2>
+    <div class="parent">
+      <div class="circle circle1"></div>
+      <div class="circle circle2"></div>
+      <div class="circle circle3"></div>
+      <div class="circle circle4"></div>
+      <div class="circle circle5"></div>
+      <div class="circle circle6"></div>
+      <div class="circle circle7"></div>
+    </div>
+  </body>
+</html>

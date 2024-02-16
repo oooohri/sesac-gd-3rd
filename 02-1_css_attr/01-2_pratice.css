@@ -107,14 +107,17 @@ div {
 .body {
   background-color: antiquewhite;
 }
+.back {
+  background-color: darkblue;
+  height: 300px;
+}
 .sesac {
   /* 뷰포트 너비의 100%가 sesac의 너비이다. */
-  width: 100vw;
+  width: 10vw;
   /* 뷰포트 너비의 10%가 sesac의 높이이다. */
   height: 10vw;
   background-color: palegreen;
-  /* 상단 여백 : 뷰포트높이 50%에서 너비 5%뺀 값 */
-  margin: calc(50vh - 5vw) auto 0 auto;
+  margin: calc(50vh - 5vw) auto;
   color: white;
   text-align: center;
   /* 10vw : 현재 뷰포트 너비의 10% 만큼의 줄 간격을 설정 */
