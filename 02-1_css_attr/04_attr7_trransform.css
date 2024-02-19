@@ -1,0 +1,210 @@
+.img-box {
+  background-color: aquamarine;
+  width: 400px;
+  height: 250px;
+}
+.img-box {
+  width: 100%; /* 부모너비가 400px이므로 400px이 됨 */
+  height: 100%; /* 부모높이가 250px이므로 250px이 됨 */
+  cursor: pointer;
+  border: 1px solid gold;
+}
+/* *transform */
+.img-box:hover {
+  /* 
+        1. skew() 
+        - 원하는 각도만큼 요소를 기울임
+        - x,y축 나누어 속성 부여 가능
+            - skewX(Xdeg)
+            - skewY(Ydeg)
+        - x,y축 동시에 사용 원하는 경우
+            - skew(Xdeg, Ydeg)
+    */
+  transform: skewX(30deg);
+  transform: skewY(30deg);
+  transform: skew(30deg, 30deg);
+  /* 
+        2.scale()
+        - 크기를 조절함 (확대, 축소)
+        - 1보다 큰 값 : 해당 배수만큼 확대
+        - 0~1 : 해당 배수만큼 축소
+*/
+  transform: scalex(2);
+  transform: scaley(0.5);
+  transform: scale(0.5, 2);
+
+  /* 
+        3. translate()
+        - 요소를 이동
+        - translateX() : x축을 기준으로 이동
+        - translateY() : y축을 기준으로 이동
+        - translateZ() : z축을 기준으로 이동
+        - translate() : x,y축을 기준으로 이동
+        */
+  transform: translateX(100px);
+  transform: translateY(-100px);
+  /* z축 변화는 perspective 속성을 사용하지 않을 경우 확인 불가 */
+  transform: perspective(500px) translateZ(100px);
+  /* 2개일 때 단축속성 */
+  transform: translate(100px, 100px);
+  transform: translate(-100px, -100px);
+  /* 3개일 때 단축속성 translate3d()로 작성해야 함 */
+  transform: perspective(500px) translate3d(100px, 100px, 100px);
+  /* 
+        4. rotate()
+        - 회전
+        - 주어진 각도만큼 회전
+        - rotateX() : x축을 기준으로 회전
+        - rotateY() : y축을 기준으로 회전
+        - rotate() : 시계 방향으로 회전
+  */
+  transform: rotate(45deg);
+  transform: perspective(500px) rotateX(45deg);
+  transform: perspective(500px) rotateY(45deg);
+
+  transform: perspective(500px) rotateX(180deg);
+  /* 뒷면 보임 여부 */
+  backface-visibility: visible; /* default */
+  backface-visibility: hidden;
+}
+
+/* * 실습 */
+/* .img-box2 {
+  display: flex;
+  background-color: aqua;
+  width: 1000px;
+  height: 1000px;
+}
+.img-1 {
+  width: 70%;
+  height: 70%;
+  transform: perspective(500px) rotateY(-20deg);
+}
+.img-2 {
+  width: 70%;
+  height: 70%;
+  transform: perspective(500px) rotateY(-10deg);
+}
+.img-3 {
+  width: 70%;
+  height: 70%;
+  transform: perspective(500px) rotateY(-10deg);
+} */
+
+.img-box2 img {
+  width: 300px;
+  height: 200px;
+}
+.img-box2 {
+  width: 100vw;
+  height: 500px;
+  background-color: antiquewhite;
+  position: relative;
+}
+.beach {
+  position: absolute;
+  transform: skewY(30deg);
+
+  transition: 1s;
+}
+
+.beach:hover {
+  transform: skew(0);
+}
+
+.beach1 {
+  top: 180px;
+  left: 200px;
+  z-index: 3;
+}
+.beach2 {
+  top: 150px;
+  left: 350px;
+  z-index: 2;
+}
+.beach3 {
+  top: 120px;
+  left: 500px;
+}
+
+/* * transition */
+/* transition은 변화가 일어날 때 사용하는 속성 */
+/* 
+    transition : 프로퍼티 값 변경 시, 일정시간에 걸쳐 변화가 일어나도록 함
+    - transition-property : 변화 대상 css 속성 지정 (default : all)
+    - transition-duration : 변화가 일어날 시간 (단위 : s)  
+    - transition-timing-function : 변화 시간별 속도 지정 (default: ease) 
+     - ease : 천천히 시작 -> 빨라짐 -> 느려짐
+     - linear : 속도 일정
+     - ease-in : 천천히 시작 -> 정상 속도
+     - ease-out : 정상 속도 -> 천천히 끝남
+     - ease-in-out : 천천히 시작 -> 정상 속도 -> 느려짐
+    - transition-delay : 지연 시간 (단위: s)
+    */
+.box {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  background-color: black;
+  /* transition 단축 속성은 지속시간만 작성 가능 */
+  /* property : all / timing-fuction : ease / delay : 0s가 기본으로 지정됨 */
+  transition: 1s;
+}
+
+.box1:hover {
+  background-color: pink;
+  height: 120px;
+  width: 120px;
+  /* transition-property: width;
+  transition-duration: 1s;
+  transition-timing-function: ease-in;
+  transition-delay: 1s; */
+
+  /* 단축 속성 */
+  /* 순서 중요 */
+  /* transition: property -> duration -> timing-function -> delay */
+  /* property에 작성된 css 속성만 transition이 적용됨 */
+  /* width,height는 호버 하자마자 변하지만 배경색은 1초 뒤에 1초 동안 ease-in 속도로 분홍색으로 변화함  */
+  transition: background-color 1s ease-in 1s;
+}
+
+.box2:hover {
+  background-color: aqua;
+  transform: translateX(200px) scaleX(2);
+}
+
+.box3:hover {
+  opacity: 0;
+}
+
+/* *실습2 */
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: azure;
+  border: 1px solid black;
+  box-sizing: border-box;
+  cursor: pointer;
+  /* 부모요소에 넣어야 마우스 되돌렸을때 부드럽게 된다. */
+  transition: 1s;
+}
+
+.square1:hover {
+  width: 200px;
+}
+
+.square2:hover {
+  /*translateX를 사용해서 짤리는거 없애준다.  */
+  transform: skewX(-45deg) translateX(50%);
+}
+.square3:hover {
+  background-color: red;
+  border-radius: 50%;
+  /* 180:반바퀴 돌림 */
+  transform: translateX(300px) rotate(180deg);
+}
+.square4:hover {
+  background-color: yellow;
+  /* 원근법으로 인해 50px이 아니라 translateY(25px) 움직여야 위 네모를 가리지 않는다.  */
+  transform: rotateY(360deg) scale(2) perspective(200px) translateY(25px);
+}

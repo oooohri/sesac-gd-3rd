@@ -19,7 +19,6 @@
   display: inline-block;
 }
 
-/* text-align이 안되는 이유? */
 .fixed-tab ul li .product-info-tab {
   margin: 0 100px;
   text-decoration: none;
@@ -88,7 +87,7 @@
         top: 0;
         background-color: pink;
       }
-      
+      - 240216: flex 배우고나서 간소화 되었다.
       .fixed-tab ul{
         display:flex;
         justify-content : space-around;

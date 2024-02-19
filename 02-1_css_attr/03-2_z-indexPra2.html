@@ -7,13 +7,19 @@
     <style>
       .parent {
         position: relative;
-        width: 300px;
+      }
+      .grass {
+        margin: 150px 0px;
+        width: 500px;
         height: 500px;
         background-image: url("./img/grass.png");
         background-size: contain;
         background-repeat: no-repeat;
+        position: absolute;
+        z-index: 1;
       }
       .circle {
+        margin: 10px 50px;
         width: 100px;
         height: 100px;
         border-radius: 50%;
@@ -26,18 +32,39 @@
       }
       .circle2 {
         background-color: blue;
-        top: 30px;
-        left: 50px;
+        top: 40px;
+        left: 70px;
       }
       .circle3 {
-        background-color: blue;
+        background-color: rgb(160, 160, 231);
         top: 70px;
-        left: 100px;
+        left: 120px;
       }
       .circle4 {
-        background-color: blue;
-        top: 0;
-        left: 400px;
+        background-color: rgb(64, 142, 251);
+        top: 120px;
+        left: 140px;
+      }
+      .circle5 {
+        background-color: rgb(106, 75, 245);
+        top: 140px;
+        left: 190px;
+        z-index: 2;
+      }
+      .circle6 {
+        background-color: black;
+        width: 20px;
+        height: 20px;
+        left: 10px;
+        top: 20px;
+        z-index: 3;
+      }
+      .circle7 {
+        background-color: white;
+        width: 50px;
+        height: 50px;
+        left: 10px;
+        top: 10px;
       }
     </style>
   </head>
@@ -51,6 +78,7 @@
       <div class="circle circle5"></div>
       <div class="circle circle6"></div>
       <div class="circle circle7"></div>
+      <div class="grass"></div>
     </div>
   </body>
 </html>

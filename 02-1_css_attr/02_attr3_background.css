@@ -79,19 +79,19 @@
   margin-bottom: 10px;
   background-color: skyblue;
 }
-
-.background-img.one {
+/* 240217 수정 - 클래스명 간소화 */
+.one {
   background-position: center;
   background-repeat: repeat-x;
 }
 
-.background-img.two {
+.two {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 100px 30px;
 }
 
-.background-img.three {
+.three {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: -100px;

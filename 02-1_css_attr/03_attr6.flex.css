@@ -29,7 +29,7 @@
   /* flex-direction: row; */
   /* height: 300px; */
 
-  /* * flex-wrap : nowrap l wrap L wrap-reverse
+  /* * flex-wrap : nowrap l wrap l wrap-reverse
   flex 속성 사용 시 컨테이너의 줄바꿈을 지정 */
   /* width: 350px; */
   /* flex-wrap: nowrap; (default)  */
@@ -145,7 +145,7 @@
 }
 .container2 .item4 {
   background-color: lightgreen;
-  /* 3분의 1 차지 */
+  /* flow-grow가 1일때, 3분의 1 차지 */
   flex-grow: 1;
 }
 .container2 .item5 {

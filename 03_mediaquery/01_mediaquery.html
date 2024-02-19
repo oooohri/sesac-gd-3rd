@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mediaquery</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .media {
+      background-color: pink;
+    }
+
+    .header-mobile {
+      display: none;
+    }
+
+    .img-container {
+      width: 100vw;
+      display: flex;
+      justify-content: space-around;
+    }
+    .img-container img {
+      width: 20vw;
+    }
+
+    /* 720px 보다 크면 '모바일 헤더' 보이게 한다.  */
+    @media screen and (max-width: 720px) {
+      .header-mobile {
+        display: block;
+      }
+      .header-nomal {
+        display: none;
+      }
+      .img-container {
+        flex-direction: column;
+        align-items: center; /* 가로 중앙 정렬 */
+      }
+      .img-container img {
+        width: 80vw;
+      }
+    }
+    /* 화면의 너비가 최대 800px 일 때 적용 -> 800px 보다 좁을 때 적용 됨 */
+    @media screen and (max-width: 800px) {
+      .media {
+        background-color: gold;
+      }
+    }
+    /* 화면의 너비가 최소 1200px 일 때 적용 -> 1200px보다 넓을 때 적용 됨 */
+    @media screen and (min-width: 1200px) {
+      .media {
+        background-color: aqua;
+      }
+    }
+  </style>
+  <body>
+    <div class="media">media</div>
+    <hr />
+    <header class="header-nomal">웹, 태블릿 헤더</header>
+    <header class="header-mobile">모바일 헤더</header>
+    <hr />
+    <section class="img-container">
+      <img src="./img/pooh.png" alt="곰돌이 푸" />
+      <img src="./img/pooh.png" alt="곰돌이 푸" />
+      <img src="./img/pooh.png" alt="곰돌이 푸" />
+      <img src="./img/pooh.png" alt="곰돌이 푸" />
+    </section>
+    <hr />
+  </body>
+</html>
