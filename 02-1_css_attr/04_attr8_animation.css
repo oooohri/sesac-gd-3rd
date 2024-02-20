@@ -2,17 +2,20 @@
   width: 100px;
   height: 100px;
   background-color: pink;
+  /* animation 설정 시, 꼭 postion을 지정해야 하는 것은 아니다. */
   position: relative;
 
   /* animation 사용 */
   animation-name: my-ani;
   animation-duration: 5s;
   animation-delay: 0.5s;
+  /* 두번 애니메이션 동작한다. */
   animation-iteration-count: 2;
   animation-timing-function: linear;
 }
 
 @keyframes my-ani {
+  /* left : 0인 위치에서 시작해서, 왼쪽에서 200,400 떨어진만큼 이동했다가 원위치 */
   0% {
     left: 0;
   }
@@ -46,6 +49,7 @@
   */
   /*  단축 프로퍼티 */
   /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  /* alternate : 애니메이션을 완료한 후, 처음 상태로 돌아가지 않고 역방향으로 애니메이션 수행한다. */
   animation: bounce1 1s ease-in infinite alternate;
 }
 

@@ -1,4 +1,5 @@
 .body {
+  /* 기본 설정되어 있는 마진,패딩 초기화 */
   margin: 0;
   padding: 0;
 }
@@ -13,25 +14,35 @@
   animation: roll 10s linear infinite;
 }
 
+/* *공굴리기 */
+/* ! calc 사용시 꼭 띄어쓰기 앞뒤로 해야 적용된다. */
 @keyframes roll {
   0% {
     /* position 사용 가능 */
     transform: translate(0px);
   }
   25% {
+    /* 100px은 스크롤 넘어가는 크기를 빼줌으로써 화면에 딱 맞게 
+        공이 회전하게 된다. */
     transform: translate(calc(100vw - 100px), 0px);
   }
+  /* 2번째 세로로 내려갈때, x축으로 이미 이동된 상태 +
+     y축으로 내려가야해서 아래와 같이 코드를 작성한다. */
+  /* ! 240220 -200px로 변경 : 밑 실습때문에 세로 여백을 주어서 -100px해줘도 
+     !   스크롤이 생겨서 -200px로 변경했다. */
   50% {
-    transform: translate(calc(100vw - 100px), calc(100vh - 100px));
+    transform: translate(calc(100vw - 100px), calc(100vh - 200px));
   }
   75% {
-    transform: translate(0, calc(100vh - 100px));
+    transform: translate(0, calc(100vh - 200px));
   }
   100% {
     transform: translate(0px);
   }
 }
-/* '글자움직이기' 위에 여백을 준다. +공 원래 부분 위치와 합해짐 
+
+/* *글자움직이기 */
+/* '글자움직이기' 위에 여백을 준다. + 공 원래 부분 위치와 합해짐 
     100px : 공 높이 */
 h2 {
   margin-top: calc(100vh - 100px);
@@ -43,11 +54,15 @@ p {
 
 @keyframes slidein {
   from {
+    /* 왼쪽 마진이 100%인 상태에서 시작하므로 맨 오른쪽에서부터
+        글자가 시작한다. */
     margin-left: 100%;
     width: 300%;
   }
   to {
     margin-left: 0;
+    /* 글자 너비가 300% -> 100%으로 변하므로 이동할때,
+        많은 글자가 화면 100%차지하고 글자가 밀려나는 효과가 나타난다.  */
     width: 100%;
   }
 }
