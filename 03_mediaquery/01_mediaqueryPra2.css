@@ -37,7 +37,9 @@ header .inner .menu {
   /* 리더님 코드 - 중앙정렬 추가  */
   /* height: 100%;
   align-items: center; */
+  /* align-items는 height가 필요하다. */
 }
+
 header .inner .menu li {
   /* margin-right: 20px; */
   padding: 10px;
@@ -103,7 +105,7 @@ header .menu-bar {
     color: white;
     cursor: pointer;
   }
-  /* 우선순위는 길수록 나타나므로 수정해줄 것! */
+  /* 우선순위는 코드 길이가 길수록 나타나므로 수정해줄 것! */
   header .inner .menu {
     display: none;
   }
