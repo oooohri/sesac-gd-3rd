@@ -236,6 +236,6 @@ let mathScore2 = Number(prompt("수학 점수를 입력하세요."));
 let engScore2 = Number(prompt("영어 점수를 입력하세요."));
 
 let avgScore2 = (mathScore2 + engScore2) / 2;
-console.log(avgScore);
+console.log(avgScore2);
 console.log("mathScore2 :", mathScore2, typeof mathScore2);
 console.log(`당신의 평균 점수는 ${avgScore2}점 입니다!`); // 템플릿 리터럴 사용

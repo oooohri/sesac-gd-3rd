@@ -83,3 +83,17 @@ function hello(name) {
 }
 
 hello("layla");
+console.log("------실습-------");
+// 실습 - 함수 만들기 1
+function multiply(num1, num2) {
+  return num1 * num2;
+  //   return문 아래에 뭘 적어도 실행되지 않는다 !
+}
+console.log(multiply(3, 4));
+
+// 실습 - 함수 만들기 2
+
+function square(num1) {
+  return num1 ** 2;
+}
+console.log(square(4));
