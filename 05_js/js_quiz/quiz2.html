@@ -20,7 +20,7 @@
         padding: 2px;
         border-radius: 3px;
         background-color: #ededed;
-        font-family: 'Noto Sans Mono', monospace;
+        font-family: "Noto Sans Mono", monospace;
         font-weight: 500;
       }
 
@@ -65,15 +65,18 @@
     </p>
 
     <script>
-      function isDone() {
-        // TODO: 조건을 만족하는 isDone 함수를 작성해주세요.
+      function isDone(num) {
+        // 조건을 만족하는 isDone 함수를 작성해주세요.
+        if (num <= 16) {
+          return true;
+        } else {
+          return false;
+        }
       }
-
-      // TODO: 해당 html 파일을 실행한 브라우저 콘솔창에서 isDone 함수를 호출해주세요!
-      // isDone(9);
-      // isDone(14);
-      // isDone(16);
-      // isDone(20);
+      isDone(9);
+      isDone(14);
+      isDone(16);
+      isDone(20);
     </script>
   </body>
 </html>
