@@ -83,6 +83,7 @@ function hello(name) {
 }
 
 hello("layla");
+
 console.log("------실습-------");
 // 실습 - 함수 만들기 1
 function multiply(num1, num2) {

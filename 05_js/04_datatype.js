@@ -2,7 +2,7 @@
 // 1. String
 // - 텍스트 정보
 // - 따옴표로 감싸야 함
-// - 숫자, 특사문자, true, false 모두 따옴표 안에 있으면 문자열임
+// - 숫자, 특수문자, true, false 모두 따옴표 안에 있으면 문자열임
 const myName = "신데렐라";
 const email = "glassshoes@google.com";
 const gender = "female";

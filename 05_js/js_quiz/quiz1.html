@@ -83,8 +83,11 @@
     <ol>
       <li class="check"><code>//</code></li>
       <li><code>&lt;!-- --&gt;</code></li>
+      <!-- html 주석 -->
       <li><code>#</code></li>
+      <!-- 파이썬 주석 -->
       <li class="check"><code>/* */</code></li>
+      <!-- + css에서도 쓰임 -->
     </ol>
     <hr />
 
@@ -101,6 +104,7 @@
     <ol>
       <li><code>v userId;</code></li>
       <li><code>const userId;</code></li>
+      <!-- const는 무조건 할당도 해줘야 한다. -->
       <li class="check"><code>let userId;</code></li>
       <li><code>string userId;</code></li>
     </ol>
@@ -140,18 +144,19 @@
       <li>Mapo</li>
     </ol>
     <hr />
-
-    <h2>Q11. 다음 대화창을 출력하는 함수는 무엇인가?</h2>
+    <!-- ?오답 -->
+    <h2>!! Q11. 다음 대화창을 출력하는 함수는 무엇인가?</h2>
     <img src="./image/img2.png" alt="보기" />
     <ol>
-      <li class="check"><code>alert('아이디는?')</code></li>
+      <li><code>alert('아이디는?')</code></li>
+      <!-- 알림창 -->
       <li><code>window('아이디는?')</code></li>
-      <li><code>prompt('아이디는?')</code></li>
+      <li class="check"><code>prompt('아이디는?')</code></li>
       <li><code>confirm('아이디는?')</code></li>
     </ol>
     <hr />
-
-    <h2>Q12. 다음 중 식별자로 가능한 것을 <u>모두</u> 고르시오.</h2>
+    <!-- ?오답 -->
+    <h2>!! Q12. 다음 중 식별자로 가능한 것을 <u>모두</u> 고르시오.</h2>
     <div>
       (참고) 식별자란 <b>이름을 붙일 대 사용하는 단어</b>로 변수나 함수에 이름에
       쓰입니다.
@@ -159,13 +164,15 @@
     <ol>
       <li><code>2user</code></li>
       <li class="check"><code>User</code></li>
+      <!-- 사용할 수 있으나, 관례를 지키지 않음-->
       <li class="check"><code>USER3</code></li>
       <li><code>*USER3</code></li>
       <li class="check"><code>USER_</code></li>
       <li><code>let</code></li>
-      <li><code>_</code></li>
+      <!-- 예약어라 안된다.-->
+      <li class="check"><code>_</code></li>
       <li><code>*</code></li>
-      <li><code>$</code></li>
+      <li class="check"><code>$</code></li>
       <li><code>new user</code></li>
       <li class="check"><code>new_user</code></li>
       <li class="check"><code>$new_user</code></li>
@@ -206,16 +213,22 @@
       <li><code>!true</code></li>
       <li><code>true && false</code></li>
       <li class="check"><code>true || false</code></li>
+      <!-- 혼자만 true -->
       <li><code>!!false && (3 > 5)</code></li>
     </ol>
     <hr />
 
-    <h2>Q17. 다음 중 결과가 다른 하나는?</h2>
+    <!-- ?오답 -->
+    <h2>!! Q17. 다음 중 결과가 다른 하나는?</h2>
     <ol>
-      <li><code>3 !== '3'</code></li>
+      <li class="check"><code>3 !== '3'</code></li>
+      <!-- true -->
       <li><code>(8 / '2') !== 4</code></li>
+      <!-- false -->
       <li><code>0 === false</code></li>
-      <li class="check"><code>('1' + 2) === 12</code></li>
+      <!-- false -->
+      <li><code>('1' + 2) === 12</code></li>
+      <!-- false -->
     </ol>
     <hr />
 
