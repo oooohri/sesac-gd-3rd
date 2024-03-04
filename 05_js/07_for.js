@@ -187,7 +187,7 @@ while (confirm("계속 할까요?")) {
 }
 
 // ? 실습 - 0~100 숫자 중 2 또는 5의 배수 총 합계 구하기
-console.log("-------------실습--------------");
+console.log("------------- 실습 :2,5배수 --------------");
 //  for문
 let pracSum = 0;
 for (let i = 0; i <= 100; i++) {
@@ -207,7 +207,7 @@ while (pracNum <= 100) {
   pracNum++;
 }
 
-console.log("-------------실습--------------");
+console.log("------------- 실습 : 13배수 --------------");
 // ? 실습 -13의 배수이면서 홀수 찾기
 let number = 0;
 while (number <= 1000) {
@@ -216,19 +216,20 @@ while (number <= 1000) {
   }
   number++;
 }
-console.log("-------------실습--------------");
+console.log("------------- 실습: 심화 -------------");
 // 심화
+// ? console 위치 중요
 let input = Number(prompt("수를 입력하세요."));
 for (i = 0; i < input; i++) {
   if (i % 13 === 0 && i % 2 === 1) {
-    console.log(i);
   }
+  console.log(i);
 }
 // 실습 - 이중 for문을 사용해 구구단 출력
 // i는 구구단의 단, j는 단에 곱해줄 수
 for (let i = 2; i <= 9; i++) {
-  console.log(`---${i} 단 ---`);
-  for (let j = 1; j < 10; j++) {
+  console.log(`------${i} 단 -------`);
+  for (let j = 1; j <= 9; j++) {
     console.log(`${i} * ${j} = ${i * j}`);
   }
 }

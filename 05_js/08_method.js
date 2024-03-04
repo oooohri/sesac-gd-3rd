@@ -1,4 +1,5 @@
 // * 문자열에서 사용 가능한 속성과 메서드
+console.log("---------------문자열 메소드--------------------");
 // length, toUpperCase(), toLowerCase(), trim(), split()
 //  indexOf(), replace(),  replaceAll(), slice(), repeat()
 // 지금까지는 우리가 직접 함수를 만들어 사용했다.
@@ -31,7 +32,8 @@ console.log(userId.length); // 공백 짤리기 전의 문자열 길이 확인
 console.log(userId.trim());
 console.log(userId.trim().length); // 공백 제거되었는지 확인
 
-// 메서드 체이닝
+// * 메서드 체이닝
+console.log("---------------메서드 체이닝--------------------");
 // 메서드를 연달아 사용 가능
 // userId의 양 끝 공백을 제거하고, 모두 대문자로 변환 후 길이 반환
 console.log(userId.trim().toUpperCase().length);
@@ -67,23 +69,26 @@ console.log(msg2.replaceAll("WoW", "OMG"));
 console.log("msg2의 값에 변화가 있는지 확인", msg2); // 변화 없음
 
 // 2024.02.28 -> 2024-02-28로 바꾸기
+console.log("-----------2024.02.28 -> 2024-02-28로 바꾸기---------");
 let date = "2024.02.28";
 console.log(date.replaceAll(".", "-"));
 console.log("2024.02.28 ".replaceAll(".", "-"));
 
 console.log("HelloWorld".repeat(5));
-console.log(date.split(".")); // 인자로 받은 문자열을 기준으로 나누어 배열로 반환
-console.log(date.split("")); // 모든 글자를 하나씩 나누어 배열로 반환
-let splitedDate = date.split("."); // ['2024', '02', '28']
-console.log(typeof splitedDate);
+console.log(date.split(".")); // 인자로 받은 문자열을 기준으로 나누어 배열로 반환  ['2024', '02', '28']
+console.log(date.split("")); // 모든 글자를 하나씩 나누어 배열로 반환 ['2', '0', '2', '4', '.', '0', '2', '.', '2', '8']
+let splitedDate = date.split(".");
+console.log(typeof splitedDate); // object
 
 // * 배열에서 사용 가능한 속성과 메서드
+console.log("---------------배열 메소드--------------------");
 // push, pop, unShift, shift, indexOf, reverse, length
 let arr1 = [1, 2, 3, 4, 5];
 let arr2 = ["quakka", "panda", "dog", "capybara"];
 
 arr1[5] = 6; // 인덱스 추가
 console.log(arr1);
+
 arr1[7] = 8; // 중간에 빈 값(empty) 생길 수 있음
 console.log(arr1);
 
@@ -122,19 +127,20 @@ console.log(arr2.length); // 4
 
 // reverse() : 배열의 순서를 뒤집음 => 배열을 변경시킴
 arr2.reverse();
-console.log(arr2);
+console.log("reverse()메소드 : " + arr2);
 
 // join() : 배열을 인자로 받은 문자열 기준으로 합쳐 문자열로 반환
 // 원래 배열을 변경시키지 않음
-console.log(arr2);
-console.log(arr2.join()); // 인자 작성하지 않으면 배열 안의 컴마(,)까지 문자열로 변환
-console.log(typeof arr2.join());
-console.log(arr2.join("")); // 빈 문자열 작성 시 모든 요소가 붙어서 문자열로 변환
-console.log(arr2.join(" 그리고 "));
-console.log(arr2);
+console.log(arr2); // ['capybara', 'dog', 'panda', 'quakka']
+console.log(arr2.join()); // 인자 작성하지 않으면 배열 안의 컴마(,)까지 문자열로 변환 -> capybara,dog,panda,quakka
+console.log(typeof arr2.join()); // string
+console.log(arr2.join("")); // 빈 문자열 작성 시 모든 요소가 붙어서 문자열로 변환 -> capybaradogpandaquakka
+console.log(arr2.join(" 그리고 ")); // capybara 그리고 dog 그리고 panda 그리고 quakka
+console.log(arr2); // ['capybara', 'dog', 'panda', 'quakka'] -> 변화 X
 
 // * 배열에서의 반복문
-// for
+console.log("---------------배열에서의 반복문--------------------");
+// ! for
 let arr3 = [1, 2, 3, 4, 5];
 let alphabets = ["a", "b", "c", "d", "e", "f"];
 
@@ -145,7 +151,7 @@ for (let i = 0; i < arr3.length; i++) {
 }
 
 console.log("for of를 사용한 배열에서의 반복");
-// for of
+// ! for of
 // 여기서 number는 for of문에서 내가 지어준 변수명
 // -> 무엇을 의미하는지 알 수 있도록 작성
 // index 번호로 순환하는 것이 아니라 배열 요소에 직접 접근
@@ -158,11 +164,11 @@ for (let alphabet of alphabets) {
   console.log(alphabet);
 }
 
-// forEach
+// ! forEach
 // 매개변수 3개를 받는 배열의 반복을 위한 메서드(=함수)
 // ! 매개변수 이름은 마음대로 지어도 상관 없지만 순서에 따른 의미는 항상 동일 -> 순서중요!
 /*
-arr.forEach(function (요소를 지칭할 별명[, 인덱스를 지칭할 별명[, arr를 지칭할 별명]]) {})
+    arr.forEach(function (요소를 지칭할 별명[, 인덱스를 지칭할 별명[, arr를 지칭할 별명]]) {})
 */
 console.log("for each를 사용한 배열에서의 반복");
 arr3.forEach(function (num, idx) {
@@ -173,14 +179,17 @@ arr3.forEach(function (num, idx) {
 // filter()
 // 조건을 만족하는 요소들을 "배열"로 반환
 // arr2의 요소 중 길이가 5자 이상인 요소만 모아 새로운 배열 만들기
+// 위에서 let arr2 = ["quakka", "panda", "dog", "capybara"]; 선언
 console.log("filter() 메서드 사용");
 let newArr2 = arr2.filter(function (animal) {
   return animal.length >= 5;
 });
+
 //  화살표 함수 작성 예시
 let newArr3 = arr2.filter((animal) => {
   return animal.length >= 5;
 });
+
 // 화살표 함수에서 return까지 생략한 것
 let newArr4 = arr2.filter((animal) => animal.length >= 5);
 
@@ -191,7 +200,7 @@ const words = ["미어캣", "라이거", "유니콘", "고질라", "드래곤", 
 
 const newWords = words.filter(function (ani) {
   return ani.charAt(0) === "라" || ani.charAt(0) === "유";
-});
+}); // ['라이거', '유니콘', '라쿤'] 출력
 console.log(newWords);
 
 // find() : 배열에서 특정 조건을 만족하는 첫 번째 요소 반환
@@ -211,3 +220,54 @@ let mapArr = nums.map(function (n) {
 });
 
 console.log(mapArr); // [100, 200, 300, 400, 500]
+
+// * 실습 - 배열에서의 반복
+console.log(
+  "---------------------1부터 100까지의 배열을 for문 사용해서 만들기------------------------"
+);
+
+let pra1 = [];
+
+// 1. 1부터 100까지의 배열을 for문 사용해서 만들기
+for (let i = 1; i <= 100; i++) {
+  pra1.push(i);
+}
+
+// 방법2) 컴퓨터에서 인덱스는 0이므로 0부터 시작
+// for(let i = 0; i < 100; i++) {
+//     pra1.push(i+1);
+// }
+
+console.log(pra1);
+
+// 2. 해당 배열의 합 구하기
+// 전역변수로 지정. for문안에 적으면 계속 반복되므로
+let pracSum = 0;
+let pracSum2 = 0;
+let pracSum3 = 0;
+
+// ! for
+// i는 인덱스
+for (let i = 0; i < pra1.length; i++) {
+  pracSum = pracSum + pra1[i];
+  //   pracSum += pra1[i];
+}
+console.log("for방법 더하기 : " + pracSum);
+
+// ! for of
+// 요소 자체의 값을 직접적으로 한다.
+// pra1에 배열에 있는 모든 요소를 pra2라고 지칭하면서 반복한다. -> 따로 인덱스니 뭐니 지정할 필요 X
+for (let pra2 of pra1) {
+  //   pracSum2 = pra2 + pra1;
+  pracSum2 = pracSum2 + pra2;
+  //   pracSum2 += pra2;
+}
+
+console.log("for of방법 더하기 : " + pracSum2);
+
+// ! forEach -> 메서드여서 인자를 받는다.
+// 콜백함수 : 메서드 안에 함수, 그 함수안에 또 함수 들어가는 것
+pra1.forEach((pra3) => {
+  pracSum3 = pracSum3 + pra3;
+});
+console.log("forEach 방법 더하기 : " + pracSum3);
