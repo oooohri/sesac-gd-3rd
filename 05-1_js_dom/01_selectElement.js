@@ -7,7 +7,7 @@
     - getElementByTagName("태그명")
  */
 
-// document객체
+// * document객체
 console.log(document); // html 문서 전체
 console.log(document.documentElement); // html 문서 내의 모든 element(요소)들을 가져옴
 console.log(document.head); // head 태그와 내부 모든 element들
@@ -15,22 +15,22 @@ console.log(document.body); // body 태그와 내부 모든 element들
 console.log(document.URL); // http, www. ... 전부 포함
 console.log(document.domain); // ip주소나 우리가 아는 도메인
 
-// 1. getElementById
+// * 1. getElementById
 console.log("------------------getElementById---------------------");
 console.log(document.getElementById("green"));
 console.log(document.getElementById("gold"));
 
-// 2. getElementsByClassName
+//  * 2. getElementsByClassName
 // 동일한 클래스를 가진 요소가 여러개 있을 수 있으므로 elements (복수형)
 console.log("------------------getElementsByClassName---------------------");
 console.log(document.getElementsByClassName("pink"));
 console.log(document.getElementsByClassName("others"));
 
-// 3. getElementsByTagName
+// * 3. getElementsByTagName
 console.log("------------------getElementsByTagName-----------------------");
 console.log(document.getElementsByTagName("div"));
 
-// 4. querySelector
+// * 4. querySelector
 // css에서 사용했던 선택자 이용해 요소 선택
 // 해당 css 선택자 중에서 일치하는 첫 번째 요소만 선택됨 -> 하나만 선택
 console.log("------------------querySelector-----------------------------");
@@ -39,8 +39,8 @@ console.log(document.querySelector(".pink"));
 console.log(document.querySelector("div.pink"));
 console.log(document.querySelector("body div"));
 
-// 5. querySelectorAll
-// 해당 css 선택자 중에서 일치하는 모든 요소를 선택됨
+// * 5. querySelectorAll
+// 해당 css 선택자 중에서 일치하는 모든 요소 선택됨
 console.log("------------------querySelectorAll-----------------------");
 console.log(document.querySelectorAll("div"));
 console.log(document.querySelectorAll("div.pink"));
@@ -59,6 +59,7 @@ console.log(document.querySelectorAll("div.pink")[2]); // 인덱스 사용해 �
 // 하지만 forEach는 사용 가능
 
 // for of 문으로 pink 클래스 모두 출력하기
+// -> 유사배열이기 때문에 for of, forEach 가능
 console.log(
   "----------------for of 문으로 pink 클래스 모두 출력하기----------------"
 );

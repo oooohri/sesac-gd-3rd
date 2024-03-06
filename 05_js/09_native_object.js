@@ -127,11 +127,14 @@ console.log(Math.round(3.4)); // 3 -> 소수를 반올림하여 정수로 변환
 console.log(Math.floor(3.4)); // 3 -> 소수를 내림하여 정수로 변환
 console.log(Math.ceil(3.4)); // 4 -> 소수를 올림하여 정수로 변환
 
+console.log("Math.random() 응용하기");
 // Math.random() 응용
 // 곱하는 수 : 원하는 범위 숫자 + 1
 
 // 0 ~ 9 사이의 난수 생성
 console.log(Math.floor(Math.random() * 10));
+// console.log(Math.random() * 10);
+
 // 0 ~ 10 사이의 난수 생성
 console.log(Math.floor(Math.random() * 11));
 
