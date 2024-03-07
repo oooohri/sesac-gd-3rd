@@ -63,7 +63,7 @@ for (let li of flowers) {
   li.classList.add("changeStyle"); // html css에 있던 changeStyle 클래스를 추가함.
 }
 
-// *(클래스)
+// * (클래스)
 // 클래스 목록 가져오기
 console.log(flowers[0].classList);
 // 클래스 지우기
@@ -135,7 +135,7 @@ for (let i = 0; i < 3; i++) {
   //   divArr.push(newDiv);
 }
 
-// append 사용해 텍스트 삽입
+// * append 사용해 텍스트 삽입
 const p1 = document.createElement("p");
 p1.innerHTML = "0306 추가된 p태그 입니다.";
 // p1.innerText = "0306 추가된 p태그 입니다."; // 기능은 똑같음
@@ -143,7 +143,7 @@ p1.innerHTML = "0306 추가된 p태그 입니다.";
 
 container.append(p1, "이건 그냥 텍스트 넣은 거예요");
 
-// appendChild()
+// * appendChild()
 // 선택된 요소의 자식요소로 매개변수 요소가 추가되는데, 가장 뒤에 자식요소로 추가됨
 // 한번에 하나의 요소만 추가할 수 있음
 const p2 = document.createElement("p");
@@ -160,20 +160,27 @@ container.append(p2, p3, p4);
 
 // container.appendChild("과연 될까요?"); // 텍스트 추가 안됨.
 
-// prepend()
+// * prepend()
 // 선택된 요소의 자식으로 추가될 때, 가장 첫 번째 자식으로 추가됨.
 // append와 반대
+
+// 1. div태그 새로 만들어서 prepend라는 이름의 클래스로 추가
+// 2. 그 클래스에 텍스트 추가하고
+// 3. container 요소에서 가장 첫번째로 추가함.
 const div2 = document.createElement("div");
 div2.classList.add("prepend");
 div2.innerText = "prepend로 추가된 첫 번째 요소";
 container.prepend(div2);
 
+//  ? 화면에는 div2 태그만 나타나는데, 개발자 도구를 보면 div3도 추가 되어 있다.
+//  -> 화면에 표시되는 순서는 DOM 계층 구조에서의 위치에 따라 달라진다.
+// div2가 먼저 추가되었다면 렌더링 결과에서는 div3 위에 표시됩니다
 const div3 = document.createElement("div");
 div3.classList.add("prepend");
 div3.innerText = "prepend로 추가된 두 번째 요소";
 container.prepend(div3);
 
-// before, after
+// * before, after
 // before : 선택된 요소의 앞에 추가됨 (prepend랑 유사)
 const h1 = document.querySelector("#h1");
 const h3 = document.createElement("h3");
@@ -211,5 +218,5 @@ deleteDiv.remove(); // 'prepend로 추가된 두 번째 요소' 삭제됨 (선�
 
 // #flower의 네 번째 li인 장미 삭제하기
 const rose = document.querySelector("#flower li:nth-child(4)");
-console.log(rose);
+console.log(rose); // <li class="changeStyle">장미</li>
 rose.remove();
