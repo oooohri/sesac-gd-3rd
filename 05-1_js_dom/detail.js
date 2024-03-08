@@ -64,35 +64,48 @@ const products = [
   },
 ];
 
-console.log("detail.html 열림");
+const productList = document.querySelector("#product-list");
+const btn = document.querySelector("#search-btn");
 
-// window.location.search : 쿼리스트링을 뽑아줌
-console.log(window.location.search); // 쿼리스트링만 뽑아서 찍음
+// ! 서버에서 받아온 데이터를 브라우저에 로드함 (데이터값 화면에 뿌림)
+function displayProducts(products) {
+  // 만약 검색을 한 경우에는 원래 있던 요소들을 삭제해야
+  // 검색 결과 요소들만 볼 수 있음
+  //   productList.innerHTML = ""; // 상품 목록 초기화 // 없어도될듯
 
-// URLSearchParams : 많은 쿼리스트링을 쉽게 추출할 수 있도록 도와줌
-// 예를들어, ?id=1&name=layla&page=3 처럼 id,name,page와 같이 많은 쿼리스트링을 전달할 경우,
-// .get method를 사용해 쉽게 해당 key의 값을 추출할 수 있음
-const urlParam = new URLSearchParams(window.location.search);
-const productId = urlParam.get("id"); // 쿼리스트링 중 id 키의 값을 뽑아줌
-console.log(productId);
+  //   상품 목록들을 화면에 나타내기 위한 코드
+  //   products는 위에서 정의한 상품 목록들
+  products.forEach((product) => {
+    const productElement = document.createElement("div");
 
-// 상품 ID에 해당하는 상품 찾기
-const product = products.find((p) => {
-  return p.id == productId;
+    // <div> <img src="./img/laptop.jpg" alt="노트북">
+    // <p>상품 이름 : 노트북, 가격: 1000000원</p> </div>
+    productElement.innerHTML = `
+            <img src="${product.image}" alt="${product.name}" />
+            <p>상품 이름: ${product.name}, 가격: ${product.price}원</p>
+          `;
+
+    // productlist(div)태그 마지막요소에 하나의 상품요소 정보를 넣는다.
+    productList.append(productElement);
+  });
+}
+
+// 검색 결과를 표시하는 함수
+// 즉, 사용자가 입력한 값과 기존 제품 일치하는지 확인하고 화면에 뿌려야됨.
+// 입력한 값(keyword) = 기존값의 필터링된거 (filteredProudcts)
+function searchProducts(keyword) {
+  const filteredProducts = products.filter((product) => {
+    return product.name.includes(keyword);
+  });
+  console.log(filteredProducts);
+  displayProducts(filteredProducts);
+}
+
+// 사용자가 입력한 값 뽑아내기
+btn.addEventListener("click", () => {
+  const keyword = document.querySelector("#search-input").value;
+  console.log(keyword);
+  searchProducts(keyword); // 위에서 정의한 함수 호출
 });
 
-console.log(product);
-
-// 클릭해서 찾은 상품을 브라우저에 보여줌
-const productDetail = document.querySelector("#product-detail");
-
-if (product) {
-  productDetail.innerHTML = `
-    <img src="${product.image}" alt="${product.name}" />
-    <h2> ${product.name}</h2> 
-    <p>가격 : ${product.price}원</p>
-    <p>${product.description}</p>
-    `;
-} else {
-  productDetail.innerHTML = "<p>해당하는 상품이 없습니다.</p>";
-}
+displayProducts(products);

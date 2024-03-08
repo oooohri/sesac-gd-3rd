@@ -3,15 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>상품 상세 정보</title>
+    <title>상품 검색</title>
+    <script defer src="./search.js"></script>
     <style>
       img {
-        height: 200px;
+        height: 100px;
       }
     </style>
-    <script defer src="./detail.js"></script>
   </head>
   <body>
-    <div id="product-detail"></div>
+    <input type="text" id="search-input" placeholder="검색어" />
+    <button id="search-btn">검색</button>
+
+    <div id="product-list"></div>
   </body>
 </html>

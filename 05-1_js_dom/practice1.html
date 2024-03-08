@@ -16,6 +16,7 @@
     <form id="form">
       <label for="value1">값1 : </label>
       <input type="text" id="value1" />
+      <!-- type = "number" -->
 
       <label for="value2">값2 : </label>
       <input type="text" id="value2" />
@@ -24,11 +25,55 @@
       <input type="text" id="operator" />
 
       <label for="result">결과 : </label>
-      <input type="text" id="result" />
+      <input type="text" id="result" disabled="true" />
+      <!--
+         disabled 속성 : 해당 input을 비활성화 하여, 사용자가 클릭할 수 없도록 함
+        위에서는 결과 값을 사용자가 임의로 변경하지 못하도록 하기 위해 추가
+        -->
       <br />
       <br />
+
       <input type="button" id="calc" value="계산하기" />
       <input type="button" id="reset" value="초기화" />
+
+      <!-- <button type="button" id="calc">계산하기</button> -->
+      <!-- <button type="button" id="reset onclick="resetInput()">초기화</button> -->
     </form>
   </body>
+  <script>
+    // * 리더님 코드
+    // function calc() {
+    //   const v1 = Number(document.querySelector("value1").value);
+    //   const v2 = Number(document.querySelector("value2").value);
+    //   const op = Number(document.querySelector("#operator").value);
+    //   let result; // undefined
+
+    //   if (op === "+") {
+    //     result = v1 + v2;
+    //   } else if (op === "-") {
+    //     result = v1 - v2;
+    //   } else if (op === "/") {
+    //     result = v1 / v2;
+    //   } else if (op === "*") {
+    //     result = v1 * v2;
+    //   } else {
+    //     result = "오류 발생";
+    //   }
+    //   document.querySelector("#result").value = result;
+    // }
+
+    // const calcBtn = document.querySelector("#calc");
+    // calcBtn.addEventListener("click", () => {
+    //   calc();
+    // });
+
+    // -> calcBtn.addEventListener("click", calc); 로도 작성 가능
+
+    // function resetInput() {
+    //   document.querySelector("#value1").value = "";
+    //   document.querySelector("#value2").value = "";
+    //   document.querySelector("#operator").value = "";
+    //   document.querySelector("#result").value = "";
+    // }
+  </script>
 </html>
