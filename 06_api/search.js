@@ -1,3 +1,5 @@
+// 제품 데이터값들을 화면에 뿌리기 위한 함수
+// 밑에 fetchProducts()가 작동되지 않으면 화면에 뿌려지지 않는다. 
 function displayProduct(products) {
   const productsListEL = document.querySelector("#product-list");
   productsListEL.innerHTML = ""; // 상품 목록 초기화
@@ -16,6 +18,7 @@ function displayProduct(products) {
 
 // 상품 데이터(json mock)를 가져오는 함수
 function fetchProducts() {
+  // api아니고 json 파일을 따로 생성했는데 그걸 가져옴.
   fetch("./data.json")
     .then((response) => response.json())
     .then((data) => {
@@ -27,4 +30,3 @@ function fetchProducts() {
 
 fetchProducts();
 
-// 유틸화 - 함수 분리해서 필요할 때마다 사용
