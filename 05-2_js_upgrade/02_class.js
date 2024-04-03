@@ -22,7 +22,7 @@ const house2 = new House("고덕 아르테온", 2010, 7);
 const house3 = new House("리앤파크", 2019, 11);
 const house4 = new House("고래힐", 2015, 5);
 console.log(house1);
-console.log(typeof house1);
+console.log(typeof house1); // object
 house1.consoleInfo();
 
 // -------------------------------------------------------------------------------
@@ -81,3 +81,62 @@ class Circle extends Shape {
 }
 let cir = new Circle(3, 2, 3.14);
 console.log(cir.getArea());
+
+class Retangle extends Shape {
+  constructor(width, height) {
+    super(width, height);
+  }
+  getArea() {
+    return Math.sqrt(this.width) + Math.sqrt(this.height);
+  }
+}
+let rec2 = new Retangle(4, 2);
+console.log(rec2.getArea());
+
+class Triangle extends Shape {
+  constructor(width, height) {
+    super(width, height);
+  }
+  getArea() {
+    return (this.width * this.height) / 2;
+  }
+}
+const tri = new Triangle(3, 4);
+console.log(tri.getArea());
+
+// 선택실습
+class Retangle2 extends Retangle {
+  constructor(width, height) {
+    super(width, height);
+  }
+
+  // 오버라이딩
+  getArea() {
+    return this.width * this.height;
+  }
+}
+class Triangle2 extends Triangle {
+  constructor(width, height) {
+    super(width, height);
+  }
+  // 오버라이딩
+  getArea() {
+    return this.width * this.height;
+  }
+}
+class Circle2 extends Circle {
+  constructor(width, height, radius) {
+    super(width, height);
+    this.radius = radius;
+  }
+  getArea() {
+    return this.width * this.height;
+  }
+}
+const rectangle = new Retangle2(2, 4);
+const triangle = new Triangle2(3, 5);
+const circle = new Circle2(1, 7);
+
+console.log(rectangle.getArea());
+console.log(triangle.getArea());
+console.log(circle.getArea());

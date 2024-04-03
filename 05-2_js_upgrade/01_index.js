@@ -51,7 +51,7 @@ console.log(newArr2);
 
 // 전개 연산자 사용
 const newArr3 = [...lunchMenu, ...dinnerMenu]; // 보다 직관적
-console.log(newArr3);
+console.log([...lunchMenu, ...dinnerMenu]);
 
 const prodData1 = [
   {
@@ -129,6 +129,9 @@ let me2 = {
   },
 };
 // 객체를 합칠 때 동일한 key가 있다면 뒤에 있는 변수 객체의 key의 value가 저장됨
+let mm = { ...me1 };
+console.log(mm);
+
 let me = { ...me1, ...me2 };
 console.log(me);
 // 점 접근법으로 함수실행
@@ -149,15 +152,13 @@ me = {
 console.log(me);
 
 // ------------------------------------------------------
-// 실습
+// 실습 - 두개 합쳐서 배열로 반환
 const word1 = "abc";
 const word2 = "xyz";
 
-const word3 = [...word1, ...word2];
-console.log(word3);
-
 // 다른방법
 // 두개의 문자열을 하나의 문자열로 합친 후 배열로 저장
+
 const newWordArr = (word1 + word2).split("");
 console.log(newWordArr);
 
@@ -296,6 +297,10 @@ test(1, 2, 3);
 
 // ? 퀴즈
 // 매개변수 갯수 제한하지 않고 모든 매개변수의 합을 구하는 함수
+// 1. 여러 매개변수를 받고, 각 값들을 쪼갠다.
+// 2. 쪼갠값을 더한다 (반복)
+// 3. 그 값을 반환한다.
+// 4. 함수를 호출한다.
 function addNumber(...num) {
   let sum = 0;
 
