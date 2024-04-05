@@ -7,7 +7,7 @@
     cjs 확장자는 commonjs를 사용하는 파일이라는 것을 알림
 */
 
-// 01_module01.cjs 사용
+// * 01_module01.cjs 사용
 const person = require("./01_module01.cjs");
 // 01_module01에서 exports한 모든 데이터가 person에 저장됨
 console.log(person);
@@ -19,15 +19,16 @@ console.log(person);
   Person: [class Person]
 }
 */
-// Person에 저장된 변수, 클래스, 함수 사용
+// person에 저장된 변수, 클래스, 함수 사용
 // 변수 사용
 console.log(person.colors); // [ 'pink', 'blue', 'yellow' ]
 // 함수 사용
 console.log(person.sayName("장원영")); // my name is 장원영 이 함수는 sayName함수 입니다. 안녕하세요! 이 함수는 sayhi함수 입니다.
 // 클래스 사용
+// console.log(person.Person("채원", 20)); // 이렇게 작성하면 안된다 new가 있어야함!
 const chaewon = new person.Person("채원", 20);
 console.log(chaewon); // Person { name: '채원', age: 20 }
-console.log(chaewon.getBornYear(20)); // 2004
+console.log(chaewon.getBornYear()); // 2004
 
 // 가져오고 싶은 변수,함수,클래스만 가져오기
 // 구조 분해 할당 사용
@@ -35,7 +36,7 @@ const { sayName } = require("./01_module01.cjs");
 sayName("안유진"); //  my name is 안유진 이 함수는 sayName함수 입니다. 안녕하세요! 이 함수는 sayhi함수 입니다.
 
 // -------------------------------------------------------------------------------------------
-// 01_module02.cjs 사용
+// * 01_module02.cjs 사용
 // const colors2 = require("./01_module02.cjs");
 // const sayName2 = require("./01_module02.cjs");
 // console.log(colors2);

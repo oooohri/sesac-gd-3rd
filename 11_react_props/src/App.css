@@ -1,0 +1,18 @@
+/* PraProps2 css */
+* {
+  margin: 10px;
+}
+.intro,
+.pic {
+  text-align: center;
+}
+
+.intro {
+  color: orange;
+  font-size: 35px;
+  font-weight: bold;
+}
+.title {
+  font-size: 25px;
+  font-weight: bold;
+}

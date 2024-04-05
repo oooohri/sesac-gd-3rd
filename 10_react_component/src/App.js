@@ -1,7 +1,8 @@
 import "./App.css";
 import ClassComponent from "./components/ClassComponent";
 import FunctionComponent from "./components/FunctionComponent";
-
+// 무조건 src-> components 경로에 파일 생성
+import Prac1 from "./components/Prac1";
 function App() {
   return (
     // return문 안은 JSX문을 사용한다.
@@ -12,6 +13,8 @@ function App() {
       <ClassComponent></ClassComponent>
       {/* 함수형 컴포넌트 */}
       <FunctionComponent></FunctionComponent>
+      {/* 실습 */}
+      <Prac1></Prac1>
     </div>
   );
 }

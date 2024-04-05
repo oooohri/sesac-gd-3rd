@@ -104,39 +104,12 @@ class Triangle extends Shape {
 const tri = new Triangle(3, 4);
 console.log(tri.getArea());
 
-// 선택실습
-class Retangle2 extends Retangle {
-  constructor(width, height) {
-    super(width, height);
-  }
-
-  // 오버라이딩
-  getArea() {
-    return this.width * this.height;
-  }
-}
-class Triangle2 extends Triangle {
-  constructor(width, height) {
-    super(width, height);
-  }
-  // 오버라이딩
-  getArea() {
-    return this.width * this.height;
-  }
-}
-class Circle2 extends Circle {
-  constructor(width, height, radius) {
-    super(width, height);
-    this.radius = radius;
-  }
-  getArea() {
-    return this.width * this.height;
-  }
-}
-const rectangle = new Retangle2(2, 4);
-const triangle = new Triangle2(3, 5);
-const circle = new Circle2(1, 7);
-
+// 선택실습 - 인스턴스 만들기
+const rectangle = new Retangle(3, 2);
 console.log(rectangle.getArea());
+
+const triangle = new Triangle(2, 7);
 console.log(triangle.getArea());
+
+const circle = new Circle(5, 2, 3.14);
 console.log(circle.getArea());
