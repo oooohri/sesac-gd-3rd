@@ -1,10 +1,12 @@
 import FunProps from "./components/FunProps";
 import ClassProps from "./components/ClassProps";
 import PraProps from "./components/PraProps";
-import PraProps2 from "./components/PraProps2";
+import FunPrac from "./components/FunPrac";
+import ClassPrac from "./components/ClassPrac";
 import "../src/App.css";
 // ----------------------------------------------------------
-import ProductList from "./components/ProductList";
+import ProductItem from "./components/ProductItem";
+import ProductContainer from "./components/ProductContainer";
 function App() {
   const sayHi = () => {
     alert("안냥");
@@ -109,22 +111,26 @@ function App() {
       {/* isRequired 사용 */}
       {/* <ClassProps drink="레몬에이드"></ClassProps> */}
 
-      {/* 실습 */}
-      {/* <PraProps></PraProps> */}
+      {/* 실습1 - 좋아하는 음식 */}
+      <PraProps></PraProps>
 
-      {/* 실습2 */}
-      {/* <PraProps2
+      {/* 실습2 - 함수형 */}
+      <FunPrac
         title="나의 하루는 4시 40분에 시작된다"
         author="김유진"
-        price={13500}
-        type="베스트 셀러"
-      ></PraProps2> */}
+        price="13,500"
+        type="자기계발서"
+      ></FunPrac>
+      {/* 실습3 - 클래스형 */}
+      <ClassPrac></ClassPrac>
 
       {/* -------------------------------------------------------- */}
       {/* 연습 */}
-      {products.map((prod) => (
-        <ProductList prodData={prod} key={prod.id} />
-      ))}
+      {/* {products.map((prod) => (
+        <ProductItem prodData={prod} key={prod.id} />
+      ))} */}
+      {/* 연습 develop */}
+      <ProductContainer products={products} />
     </div>
   );
 }
