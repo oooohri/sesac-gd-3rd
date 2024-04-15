@@ -12,11 +12,11 @@ function App() {
       <ClassState />
       <FuncState></FuncState>
       {/* 실습1 -클래스형*/}
-      <Classprac />
+      {/* <Classprac /> */}
       {/* 실습2 - 함수형 */}
-      <Funprac />
+      {/* <Funprac /> */}
       {/* 실습3 - 뽀로로*/}
-      <CharactorContainer></CharactorContainer>
+      {/* <CharactorContainer></CharactorContainer>
       <button onClick={() => setShow(true)}>모달 보이기</button>
 
       {show && <Modal msg="확인하시겠습니까?" setShow={setShow} />}
@@ -31,7 +31,7 @@ function App() {
           isCancelBtn={true}
           setShow={setShow}
         />
-      )}
+      )} */}
     </div>
   );
 }

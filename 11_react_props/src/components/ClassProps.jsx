@@ -31,6 +31,7 @@ export default class ClassProps extends Component {
 
   static propsTypes = {};
 }
+
 // 클래스형 컴포넌트에서 props 관련 속성을 추가하는 방법 2
 // 클래스 컴포넌트 선언 밖에서 점 접근법으로 props 속성을 지정
 // drink, payment props는 string / price props는 number로 타입 제한

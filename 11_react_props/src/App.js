@@ -79,18 +79,20 @@ function App() {
 
   return (
     <div className="App">
+      {/* ------------------------- 함수형 컴포넌트 ------------------------- */}
       {/* <FunProps weather="sunny" feeling="happy" /> */}
 
       {/* defaultProps 사용 */}
-      {/* <FunProps feeling={true} /> */}
+      {/* <FunProps /> */}
 
       {/* PropTypes 사용 */}
       {/* props로 전달하는 값이 문자열인 경우에는 ""(따옴표)로 감싸 전달 */}
       {/* 이외의 데이터타입은 {}(중괄호)로 감싸 전달 */}
-      {/* <FunProps feeling="exciting" /> */}
+      {/* <FunProps weather={true} feeling="exciting" /> */}
 
       {/* 문자열 전달 */}
       {/* props.children */}
+      {/* <FunProps name="장원영">예쁘다</FunProps> */}
       {/* 함수 전달 */}
       {/* <FunProps>{sayHi}</FunProps> */}
       {/* 요소 전달 */}
@@ -98,7 +100,8 @@ function App() {
         <div>안녕안녕</div>
         <div>자니?</div>
       </FunProps> */}
-      {/* --------------------------------- */}
+
+      {/* ------------------------- 클래스형 컴포넌트 ------------------------- */}
       {/* class 컴포넌트에서의 props사용 */}
       {/* <ClassProps drink="아메리카노" payment="카드" price={4000} /> */}
 
@@ -112,17 +115,17 @@ function App() {
       {/* <ClassProps drink="레몬에이드"></ClassProps> */}
 
       {/* 실습1 - 좋아하는 음식 */}
-      <PraProps></PraProps>
+      {/* <PraProps></PraProps> */}
 
       {/* 실습2 - 함수형 */}
-      <FunPrac
+      {/* <FunPrac
         title="나의 하루는 4시 40분에 시작된다"
         author="김유진"
         price="13,500"
         type="자기계발서"
-      ></FunPrac>
+      ></FunPrac> */}
       {/* 실습3 - 클래스형 */}
-      <ClassPrac></ClassPrac>
+      {/* <ClassPrac></ClassPrac> */}
 
       {/* -------------------------------------------------------- */}
       {/* 연습 */}

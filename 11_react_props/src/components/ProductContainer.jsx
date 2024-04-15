@@ -22,14 +22,14 @@ export default function ProductContainer({ products }) {
                 - 기존 요소와 업데이트 요소를 비교할 때 사용하는 속성
                 - 다른 요소와 겹쳐지지 않는 고유한 값을 가지고 있어야 함
                 - 배열의 요소 중 고유한 값(id)이 없다면 **최후의 수단** 으로 index를 사용
-         */}
+      */}
       {products?.map((prod, index) => {
         // <producItem prodData={prod} key={prod.id} />;
-        <producItem prodData={prod} key={`prod_${index}`} />;
+        <ProducItem prodData={prod} key={`prod_${index}`} />;
       })}
 
       {products?.map((prod) => (
-        <producItem prodData={prod} key={prod.id} />
+        <ProducItem prodData={prod} key={prod.id} />
       ))}
     </div>
   );
