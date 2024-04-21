@@ -7,6 +7,7 @@ export default function Modal(props) {
 
   return (
     <div className="modal-container">
+      {/* 클릭시, show가 false이므로 나타나지 않는다. */}
       <button onClick={() => setShow(false)}>X</button>
       <div>{msg}</div>
       {isInput && <input type="text" />}

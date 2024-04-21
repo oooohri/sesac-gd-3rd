@@ -49,6 +49,7 @@ export default function Prac1() {
 
   // validation 로직
   const validation = () => {
+    // 길이가 0이면 인풋창에 포커싱 (즉, 입력되지 않았을때)
     if (inputUser.trim().length === 0) {
       userInputRef.current.focus();
 

@@ -6,11 +6,11 @@ import PracFakePost from "./components/PracFakePost";
 function App() {
   return (
     <div className="App">
-      <ClassLifeCycle />
+      {/* <ClassLifeCycle /> */}
       <FunLifeCycle />
-      <PracContainer>
+      {/* <PracContainer>
         <PracFakePost />
-      </PracContainer>
+      </PracContainer> */}
     </div>
   );
 }

@@ -32,8 +32,11 @@ export default function CharactorContainer() {
   const [selectedCharactor, setselectedCharactor] = useState(null);
   // handleClick 함수 (인자: 선택된 버튼의 name값)
   const handleClick = (name) => {
+    // 캐릭터 이름과 전달받은 이름이 같으면 selected 변수에 해당 객체를 담음
+    // find : 배열을 순회하여 주어진 조건에 맞는 첫번째 요소를 반환
     const selected = characters.find((charactor) => charactor.name === name);
     console.log(selected);
+    // 선택된 변수로 업데이트 (state에 저장)
     setselectedCharactor(selected);
   };
   // charactors 배열에서 인자로 받은 name의 값과 동일한 요소를 selectedCharator state에 저장

@@ -45,7 +45,7 @@ const MyComponent = (props) => {
 
   return (
     <>
-      <div>MyComponent function형 {number}</div>
+      <div>MyComponent function형 : {number}</div>
       <input
         type="text"
         value={text}

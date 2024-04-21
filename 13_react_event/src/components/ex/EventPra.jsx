@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 export default function EventPra() {
+  // useState 두개씩 쓰는것보다, 이렇게 객체안에 담아서 사용하는 것이 더 효율적!
   const [textColor, setTextColor] = useState({
     color: "black",
     text: "검정색 글씨",

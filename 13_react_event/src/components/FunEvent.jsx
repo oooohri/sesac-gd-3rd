@@ -15,7 +15,6 @@ export default function FuncEvent() {
       alert(`점심 메뉴는 ${menu}로 결정!`);
     }
   };
-
   const msgToEng = () => {
     setMsg("fighting!");
   };
@@ -25,6 +24,7 @@ export default function FuncEvent() {
   const alertMsg = (msg) => {
     alert(msg);
   };
+
   return (
     <>
       <h2>함수형 컴포넌트 event handling</h2>
@@ -33,19 +33,22 @@ export default function FuncEvent() {
       <button onClick={msgToEng}>fighting!</button>
       <button onClick={msgToKor}>힘내세요!</button>
       <br />
+
       {/* 함수에 매개변수를 전달하는 경우 */}
-      {/* 방법 1. */}
+      {/* 방법 1. 익명함수*/}
       {/* onClick에서 익명 함수를 선언하고, 그 내부에 함수를 실행시킴 */}
       {/* 익명 함수를 전달하는 것이 됨 -> alertMsg 함수 자체를 호출한 것이 X */}
       <button onClick={() => alertMsg("오늘은 금요일이잖아요")}>
         메시지 alert창에 띄우기
       </button>
-      {/* 방법 2. */}
+
+      {/* 방법 2. bind */}
       {/* bind 메서드 사용 */}
       <button onClick={alertMsg.bind(null, "끝까지 불태워 봅시다!")}>
         메시지 alert창에 띄우기2
       </button>
       <br />
+
       {/* input 태그에서 변경사항 발생 시 해당 input의 value를 콘솔에 출력 */}
       {/* input 태그에서 enter 키를 누르면 입력한 값을 alert창으로 보여주기 */}
       <input
