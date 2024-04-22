@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 
+// FuncLifeCycle에서 number={number}로 전달받은 값이 props.
 const MyComponent = (props) => {
   const { number } = props;
   const [text, setText] = useState("");

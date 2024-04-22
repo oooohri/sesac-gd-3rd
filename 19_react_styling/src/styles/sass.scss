@@ -1,3 +1,11 @@
+@import "utils";
+// import utils
+.sass-util {
+  background-color: $color-main-util;
+}
+.sass-util-btn {
+  @include btn($bgColor: $color-main-util);
+}
 .sass-box {
   width: 100px;
   height: 100px;
