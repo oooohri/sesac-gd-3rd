@@ -35,3 +35,24 @@ let arr4: Array<boolean | null | number[]> = [true, null, false, [4, 22]];
 // 어떤 자료형이든 상관 없이 들어갈 수 있는 배열
 // 최대한 자제하여 사용할것 -> js랑 별 차이가 없기 때문!
 let arrAny: any[] = [1, 2, 40, false, ["a", "b", 3], null];
+
+// object
+let obj1: object = {
+  name: "layla",
+  gender: "female",
+};
+
+// ---------------------------------------------------------------------------
+// * 타입 추론 (암묵적으로 타입 지정됨)
+let aa = 5;
+let bb = "hello";
+let cc = true;
+let dd = null;
+let ee;
+
+// aa = "5";  // error
+
+// 타입을 지정하지 않고 선언만 한 변수의 경우 any타입이 자동 지정됨
+// -> 모든 타입을 넣어도 오류안남
+ee = 5;
+ee = "abc"; // any타입을 사용하게 되면 ts를 사용하는 이유가 사라짐

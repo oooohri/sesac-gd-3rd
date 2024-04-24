@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import {
-  increment,
+  increament,
   decrement,
   increase,
   decrease,
@@ -18,7 +18,7 @@ export default function UseToolkit() {
     <>
       <h2>redux toolkit의 createSlice 사용하기</h2>
       <div>{count}</div>
-      <button onClick={() => dispatch(increment())}>+1</button>
+      <button onClick={() => dispatch(increament())}>+1</button>
       <button onClick={() => dispatch(decrement())}>-1</button>
       <input type="number" ref={inputRef} />
       <button

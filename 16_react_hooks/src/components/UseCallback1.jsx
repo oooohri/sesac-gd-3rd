@@ -1,6 +1,7 @@
 import { useCallback } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
+
 export default function UseCallback1() {
   const [number, setNumber] = useState(0);
   const [isTrue, setIsTrue] = useState(true);
@@ -20,6 +21,7 @@ export default function UseCallback1() {
     console.log(`number state : ${number}`);
   }, [number]);
 
+  // useEffect() 통해 func1, func2 변경사항 시 나타나게 한다.
   useEffect(() => {
     console.log("func1 함수 변경!!! 🦊");
   }, [func1]);
@@ -40,6 +42,7 @@ export default function UseCallback1() {
       <br />
       <button onClick={func1}>func 실행</button>
       <button onClick={func2}>func2 실행</button>
+      {/* toString 붙이는 이유: boolean값을 문자열로 변환하여 명확히 버튼화면에 true,false가 나타난다. */}
       <button onClick={(e) => setIsTrue(!isTrue)}>{isTrue.toString()}</button>
     </>
   );

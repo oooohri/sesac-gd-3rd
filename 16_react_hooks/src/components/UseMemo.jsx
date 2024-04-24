@@ -2,7 +2,9 @@ import { useMemo } from "react";
 import { useState } from "react";
 
 export default function UseMemo() {
+  // 계산 값 state
   const [count, setCount] = useState(0);
+  // 사용자 입력 값 state
   const [inputVal, setInputVal] = useState("");
 
   // calc 함수는 inputVal state가 업데이트 될 때도 함수가 실행됨
